@@ -84,7 +84,7 @@ public class FormPom {
 
     public void setSubject(String subjectParam) {
         subjectsInput.sendKeys(subjectParam);
-//        subjectsInput.sendKeys(Keys.ENTER);
+        subjectsInput.sendKeys(Keys.ENTER);
     }
 
     public void setDate(String dateParam) {
