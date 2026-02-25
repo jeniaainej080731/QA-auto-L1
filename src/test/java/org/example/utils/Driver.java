@@ -60,8 +60,8 @@ public class Driver {
             put("noSandbox", true);
             put("headless", true);
         }});
-//        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
-        RemoteWebDriver driver = (RemoteWebDriver) Driver.getAutoLocalDriver();
+        RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+//        RemoteWebDriver driver = (RemoteWebDriver) Driver.getAutoLocalDriver();
 
         return driver;
     }
