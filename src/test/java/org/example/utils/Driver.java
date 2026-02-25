@@ -33,8 +33,8 @@ public class Driver {
     }
 
     public static RemoteWebDriver getRemoteDriver() throws MalformedURLException {
-//        ChromeOptions options = new ChromeOptions();
-        FirefoxOptions options = new FirefoxOptions();
+        ChromeOptions options = new ChromeOptions();
+//        FirefoxOptions options = new FirefoxOptions();
         options.setCapability("browserVersion", "128.0");
         options.setCapability("selenoid:options", new HashMap<String, Object>() {{
             /* How to add test badge */
@@ -61,8 +61,6 @@ public class Driver {
             put("headless", true);
         }});
         RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-//        RemoteWebDriver driver = (RemoteWebDriver) Driver.getAutoLocalDriver();
-
         return driver;
     }
 }
