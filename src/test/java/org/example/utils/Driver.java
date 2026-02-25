@@ -16,20 +16,20 @@ import java.util.HashMap;
 
 public class Driver {
     static public WebDriver getAutoLocalDriver() {
-//        WebDriverManager.chromedriver().setup(); // sets up ChromeDriver automatically
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup(); // sets up ChromeDriver automatically
+//        WebDriverManager.firefoxdriver().setup();
 //        return new ChromeDriver();
         return new FirefoxDriver();
     }
 
     static public WebDriver getLocalDriver() {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Downloads\\chromedriver-win64");
-        System.setProperty("webdriver.gecko.driver", "C:\\path\\geckodriver.exe");
-//        ChromeOptions options = new ChromeOptions();
-        FirefoxOptions options = new FirefoxOptions();
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\Downloads\\chromedriver-win64");
+//        System.setProperty("webdriver.gecko.driver", "C:\\path\\geckodriver.exe");
+        ChromeOptions options = new ChromeOptions();
+//        FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--remote-allow-origins=*");
-//        return new ChromeDriver(options);
-        return new FirefoxDriver(options);
+        return new ChromeDriver(options);
+//        return new FirefoxDriver(options);
     }
 
     public static RemoteWebDriver getRemoteDriver() throws MalformedURLException {
