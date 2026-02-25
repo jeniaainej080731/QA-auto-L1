@@ -3,7 +3,8 @@ name: 01_01_02_24_hello_world
 on:
   push:
     branches:
-      - main
+#      - main
+      - jjs
 env:
   TASK_FOLDER: "${{ github.workspace }}"
 
