@@ -5,6 +5,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class FormPom {
 
@@ -69,7 +72,8 @@ public class FormPom {
         state.click();
         WebElement ddState = state.findElement(By.xpath("//*[text()='" + stateParam  + "']"));
 //        Utils.explicitWait(driver, ExpectedConditions.elementToBeClickable(ddState), 10);
-        pause(1000);
+//        pause(2000);
+
         ddState.click();
     }
 
@@ -80,7 +84,7 @@ public class FormPom {
 
     public void setSubject(String subjectParam) {
         subjectsInput.sendKeys(subjectParam);
-        subjectsInput.sendKeys(Keys.ENTER);
+//        subjectsInput.sendKeys(Keys.ENTER);
     }
 
     public void setDate(String dateParam) {
