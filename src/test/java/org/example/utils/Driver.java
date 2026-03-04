@@ -18,8 +18,8 @@ public class Driver {
     static public WebDriver getAutoLocalDriver() {
         WebDriverManager.chromedriver().setup(); // sets up ChromeDriver automatically
 //        WebDriverManager.firefoxdriver().setup();
-//        return new ChromeDriver();
-        return new FirefoxDriver();
+        return new ChromeDriver();
+//        return new FirefoxDriver();
     }
 
     static public WebDriver getLocalDriver() {
