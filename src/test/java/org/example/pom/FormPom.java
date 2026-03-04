@@ -21,7 +21,7 @@ public class FormPom {
     WebElement forms;
 
     @FindBy(xpath = "//*[text()='Practice Form']")
-    WebElement practiceForm;
+    public WebElement practiceForm;
 
     @FindBy(xpath = "//*[@id='firstName']")
     WebElement firstName;
@@ -42,7 +42,7 @@ public class FormPom {
     WebElement subjectsInput;
 
     @FindBy(xpath = "//*[@id='state']")
-    WebElement state;
+    public WebElement state;
 
     @FindBy(xpath = "//*[@id='city']")
     WebElement city;
@@ -98,7 +98,7 @@ public class FormPom {
     public void setSubject(String subjectParam) {
         takeScreenshot("Before subject");
         subjectsInput.sendKeys(subjectParam);
-        subjectsInput.sendKeys(Keys.ENTER);
+//        subjectsInput.sendKeys(Keys.ENTER);
         takeScreenshot("After subject");
     }
 

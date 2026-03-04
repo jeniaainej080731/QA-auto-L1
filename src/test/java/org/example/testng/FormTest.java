@@ -16,7 +16,7 @@ public class FormTest {
     private static final Logger logger = LogManager.getLogger(FormTest.class);
 
     static public WebDriver driver;
-    static public String URL = "https://demoqa.com/";
+    static public String URL = "https://demoqa.com/automation-practice-form";
     static public String FIRST_NAME = "Jenia";
     static public String LAST_NAME = "Grigorita";
     static public String EMAIL = "grigorita@gmail.com";
@@ -43,6 +43,7 @@ public class FormTest {
         driver.get(URL);
         FormPom formPom = new FormPom(driver);
         formPom.clickForms();
+        formPom.scrollToElement(formPom.practiceForm);
         formPom.clickPracticeForm();
         formPom.closeAdvert();
         formPom.setFirstName(FIRST_NAME);
@@ -69,7 +70,7 @@ public class FormTest {
         formPom.setSubject(SUBJECT);
         logger.info("Set subject");
 
-        formPom.pause(5000);
+        formPom.scrollToElement(formPom.state);
         formPom.setState(STATE);
         logger.info("Set state");
 
